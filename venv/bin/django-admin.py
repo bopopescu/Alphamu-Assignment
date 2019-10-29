@@ -1,4 +1,4 @@
-#!/home/cyx-vinod/Desktop/cynixlabs/cyx-vinod/29-10-2019/venv/bin/python3
+#!/home/cyx-vinod/Desktop/cynixlabs/cyx-vinod/29-10-2019/Alphamu-Assignment/venv/bin/python3
 from django.core import management
 
 if __name__ == "__main__":

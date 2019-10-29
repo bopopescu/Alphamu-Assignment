@@ -147,7 +147,7 @@ class Delete(DeleteView):
     model = Questions
     template_name = 'home.html'
 
-    def get(self, request, *args, **kwargs):
+    def delete(self, request, *args, **kwargs):
         question_id = self.kwargs['pk']
 
         """ connect to Mysql """
@@ -162,7 +162,7 @@ class Delete(DeleteView):
                 cursor.execute(query)
                 db.commit()
 
-                return render(request, self.template_name)
+                return redirect(reverse('home'))
         except Error as e:
             print(e)
             return render(request, self.template_name)

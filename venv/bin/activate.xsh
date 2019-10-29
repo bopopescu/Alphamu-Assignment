@@ -25,7 +25,7 @@ def _deactivate(args):
 _deactivate(["nondestructive"])
 aliases["deactivate"] = _deactivate
 
-$VIRTUAL_ENV = r"/home/cyx-vinod/Desktop/cynixlabs/cyx-vinod/29-10-2019/venv"
+$VIRTUAL_ENV = r"/home/cyx-vinod/Desktop/cynixlabs/cyx-vinod/29-10-2019/Alphamu-Assignment/venv"
 
 $_OLD_VIRTUAL_PATH = $PATH
 $PATH = $PATH[:]

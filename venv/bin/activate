@@ -40,7 +40,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/cyx-vinod/Desktop/cynixlabs/cyx-vinod/29-10-2019/venv"
+VIRTUAL_ENV="/home/cyx-vinod/Desktop/cynixlabs/cyx-vinod/29-10-2019/Alphamu-Assignment/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

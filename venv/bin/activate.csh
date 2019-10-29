@@ -10,7 +10,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV "/home/cyx-vinod/Desktop/cynixlabs/cyx-vinod/29-10-2019/venv"
+setenv VIRTUAL_ENV "/home/cyx-vinod/Desktop/cynixlabs/cyx-vinod/29-10-2019/Alphamu-Assignment/venv"
 
 set _OLD_VIRTUAL_PATH="$PATH:q"
 setenv PATH "$VIRTUAL_ENV:q/bin:$PATH:q"
