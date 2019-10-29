@@ -105,7 +105,10 @@
                     <tr>
                         <td>{{ questions_obj.1 }}</td>
                         <td>{{ questions_obj.2 }}</td>
-                        <td><a href="{% url 'edit' questions_obj.0 %}">Edit</a>&nbsp;{{ nom }}&nbsp;<a href="{% url 'delete' questions_obj.0 %}">Delete</a></td>
+                        <td>
+                            <a href="{% url 'edit' questions_obj.0 %}">Edit</a>&nbsp;{{ nom }}&nbsp;
+                            <a href="{% url 'delete' questions_obj.0 %}">Delete</a>
+                        </td>
                     </tr>
                     {% endfor %}
                 {% else %}

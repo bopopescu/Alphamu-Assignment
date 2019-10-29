@@ -142,13 +142,8 @@ class Edit(UpdateView):
             if db is not None and db.is_connected():
                 db.close()
 
-
-class Delete(DeleteView):
-    model = Questions
-    template_name = 'home.html'
-
-    def delete(self, request, *args, **kwargs):
-        question_id = self.kwargs['pk']
+    def delete(self, *args, **kwargs):
+        question_id = kwargs['pk']
 
         """ connect to Mysql """
         db_config = read_db_config()
@@ -158,14 +153,15 @@ class Delete(DeleteView):
             if db.is_connected():
                 cursor = db.cursor()
 
-                query = "DELETE answers, questions FROM answers left join questions on (answers.id = questions.answer_id) WHERE questions.id = %s" % (question_id)
+                query = "DELETE answers, questions FROM answers left join questions on (answers.id = questions.answer_id) WHERE questions.id = %s" % (
+                    question_id)
                 cursor.execute(query)
                 db.commit()
 
                 return redirect(reverse('home'))
         except Error as e:
             print(e)
-            return render(request, self.template_name)
+            return render(self.request, self.template_name)
         finally:
             if db is not None and db.is_connected():
                 db.close()
